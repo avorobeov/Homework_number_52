@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Homework_number_52
 {
@@ -17,9 +15,9 @@ namespace Homework_number_52
             prison.ShowAllPrisoners();
 
             Console.WriteLine("Для того что бы объявить амнистию нажмите любую клавишу.");
-            Console.ReadLine();
+            Console.ReadKey();
 
-            prison.GrantAmnesty(crimeCoveredByAmnesty);
+            prison.DeclareAmnesty(crimeCoveredByAmnesty);
 
             prison.ShowAllPrisoners();
 
@@ -51,9 +49,9 @@ namespace Homework_number_52
             Fill();
         }
 
-        public void GrantAmnesty(string crime)
+        public void DeclareAmnesty(string crime)
         {
-            _prisoners = _prisoners.Where(Prisoner => Prisoner.Crime != crime).ToList() ;
+            _prisoners = _prisoners.Where(Prisoner => Prisoner.Crime != crime).ToList();
         }
 
         public void ShowAllPrisoners()
