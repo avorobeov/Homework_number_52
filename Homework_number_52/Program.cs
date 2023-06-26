@@ -24,6 +24,7 @@ namespace Homework_number_52
             Console.ReadLine();
         }
     }
+
     class Prisoner
     {
         public Prisoner(string surname, string name, string patronymic, string crime)
